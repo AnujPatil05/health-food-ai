@@ -16,8 +16,8 @@
 
 ## 🧠 How it Works
 
-- You tell it what you're suffering from (e.g., fever)
-- You input a food item (e.g., ice cream)
+- You tell it what you're suffering from (e.g. fever)
+- You input a food item (e.g. ice cream)
 - The model classifies whether it's **safe to eat** or **risky**
 - Response includes confidence score and reasoning (coming soon)
 
