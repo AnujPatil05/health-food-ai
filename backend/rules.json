@@ -1,0 +1,16 @@
+{
+    
+  "fever": {
+    "avoid": ["ice cream", "cold drinks", "fried food"],
+    "recommended": ["porridge", "boiled vegetables", "soup", "rice"]
+  },
+  "sore throat": {
+    "avoid": ["ice cream", "cold juice", "spicy food"],
+    "recommended": ["warm water", "soup", "honey", "turmeric milk"]
+  },
+  "constipation": {
+    "avoid": ["white bread", "cheese", "red meat"],
+    "recommended": ["fiber-rich fruits", "oats", "salad", "water"]
+  }
+
+}

@@ -1,32 +1,43 @@
-# backend/app.py
-
-from fastapi import FastAPI
-from transformers import pipeline
+from fastapi import FastAPI, Query
 from pydantic import BaseModel
+import json
 
 app = FastAPI()
 
-# Load Hugging Face model
-classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
+# Load rule data
+with open("rules.json") as f:
+    FOOD_RULES = json.load(f)
 
-# Input model for POST requests
-class FoodCheckRequest(BaseModel):
+class FoodQuery(BaseModel):
+    illness: str
     food_item: str
-    health_condition: str
-
-@app.get("/")
-def read_root():
-    return {"message": "NutriGuard API is running!"}
 
 @app.post("/check-food")
-def check_food(data: FoodCheckRequest):
-    labels = ["safe to eat", "risky for health"]
-    input_text = f"{data.food_item} while having {data.health_condition}"
-    result = classifier(input_text, labels)
+def check_food(query: FoodQuery):
+    illness = query.illness.lower()
+    food = query.food_item.lower()
 
-    return {
-        "food_item": data.food_item,
-        "health_condition": data.health_condition,
-        "result": result["labels"][0],  # Most likely label
-        "score": round(result["scores"][0] * 100, 2)
-    }
+    if illness not in FOOD_RULES:
+        return {
+            "status": "unknown",
+            "message": f"No rules found for illness: {illness}"
+        }
+
+    avoid = [f.lower() for f in FOOD_RULES[illness]["avoid"]]
+    recommended = [f.lower() for f in FOOD_RULES[illness]["recommended"]]
+
+    if food in avoid:
+        return {
+            "status": "avoid",
+            "message": f"{food.title()} should be avoided when you have {illness}."
+        }
+    elif food in recommended:
+        return {
+            "status": "recommended",
+            "message": f"{food.title()} is good for you when you have {illness}."
+        }
+    else:
+        return {
+            "status": "neutral",
+            "message": f"{food.title()} is not explicitly listed for {illness}, so consult a doctor if unsure."
+        }
