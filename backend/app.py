@@ -1,43 +1,46 @@
-from fastapi import FastAPI, Query
+from fastapi import FastAPI, Request
+from transformers import pipeline
 from pydantic import BaseModel
 import json
 
 app = FastAPI()
 
-# Load rule data
-with open("rules.json") as f:
-    FOOD_RULES = json.load(f)
+# Load HuggingFace classifier
+classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
 
-class FoodQuery(BaseModel):
+# Optional: Load fallback rules from JSON
+try:
+    with open("rules.json", "r") as file:
+        rules = json.load(file)
+except FileNotFoundError:
+    rules = {}
+
+class FoodCheckRequest(BaseModel):
     illness: str
     food_item: str
 
 @app.post("/check-food")
-def check_food(query: FoodQuery):
-    illness = query.illness.lower()
-    food = query.food_item.lower()
+async def check_food(data: FoodCheckRequest):
+    illness = data.illness.lower()
+    food = data.food_item.lower()
 
-    if illness not in FOOD_RULES:
-        return {
-            "status": "unknown",
-            "message": f"No rules found for illness: {illness}"
-        }
+    # AI-powered classification
+    labels = [f"suitable for {illness}", f"bad for {illness}"]
+    result = classifier(food, candidate_labels=labels)
 
-    avoid = [f.lower() for f in FOOD_RULES[illness]["avoid"]]
-    recommended = [f.lower() for f in FOOD_RULES[illness]["recommended"]]
+    top_label = result["labels"][0]
+    confidence = result["scores"][0]
 
-    if food in avoid:
-        return {
-            "status": "avoid",
-            "message": f"{food.title()} should be avoided when you have {illness}."
-        }
-    elif food in recommended:
-        return {
-            "status": "recommended",
-            "message": f"{food.title()} is good for you when you have {illness}."
-        }
-    else:
-        return {
-            "status": "neutral",
-            "message": f"{food.title()} is not explicitly listed for {illness}, so consult a doctor if unsure."
-        }
+    ai_judgment = "yes" if "suitable" in top_label and confidence > 0.7 else "no"
+
+    # Optional: fallback rule-based logic if AI is unsure
+    rule_based = rules.get(illness, {}).get("not_allowed", [])
+    rule_check = "no" if food in rule_based else "yes"
+
+    return {
+        "illness": illness,
+        "food": food,
+        "ai_judgment": ai_judgment,
+        "ai_confidence": confidence,
+        "rule_based_check": rule_check
+    }
