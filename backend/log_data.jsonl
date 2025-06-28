@@ -1,0 +1,9 @@
+{"illness": "fever", "food": "cold milk", "ai_label": "Probably suitable", "confidence": 0.67}
+{"illness": "sore throat", "food": "cold milk", "ai_label": "Probably suitable", "confidence": 0.71}
+{"illness": "sore throat", "food": "ginger", "ai_label": "Probably suitable", "confidence": 0.69}
+{"illness": "sore throat", "food": "warm water", "ai_label": "Higly recommended", "confidence": 0.84}
+{"illness": "fever", "food": "ice cream", "ai_label": "Higly recommended", "confidence": 0.82}
+{"illness": "fever", "food": "porridge", "ai_label": "Probably suitable", "confidence": 0.78}
+{"illness": "fever", "food": "ice cream", "ai_label": "Higly recommended", "confidence": 0.82}
+{"illness": "fever", "food": "ice cream", "ai_label": "Higly recommended", "confidence": 0.82}
+{"illness": "fever", "food": "candy", "ai_label": "Higly recommended", "confidence": 0.86}
