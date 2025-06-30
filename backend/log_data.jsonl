@@ -7,3 +7,32 @@
 {"illness": "fever", "food": "ice cream", "ai_label": "Higly recommended", "confidence": 0.82}
 {"illness": "fever", "food": "ice cream", "ai_label": "Higly recommended", "confidence": 0.82}
 {"illness": "fever", "food": "candy", "ai_label": "Higly recommended", "confidence": 0.86}
+{"illness": "fever", "food": "cold drink", "ai_label": "Uncertain", "confidence": 0.47}
+{"illness": "fever", "food": "cold drinks", "ai_label": "Uncertain", "confidence": 0.54}
+{"illness": "fever", "food": "cold drinks", "ai_label": "Uncertain", "confidence": 0.54}
+{"illness": "sore throat", "food": "ice cream", "ai_label": "Uncertain", "confidence": 0.58}
+{"illness": "fever", "food": "ice cream", "ai_label": "Uncertain", "confidence": 0.49}
+{"illness": "constipation", "food": "cheese", "ai_label": "Strongly not recommended", "confidence": 0.81}
+{"illness": "fever", "food": "soup", "ai_label": "Uncertain", "confidence": 0.54}
+{"illness": "sore throat", "food": "soup", "ai_label": "Probably not recommended", "confidence": 0.61}
+{"illness": "sore throat", "food": "soup", "ai_label": "Probably not suitable", "confidence": 0.61, "explaination": "Soup might not be the best option if you have sore throat, but confidence is moderate."}
+{"illness": "sore throat", "food": "ice cream", "ai_label": "Uncertain", "confidence": 0.58, "explaination": "AI could not confidently determine if ice cream is unsafe for sore throat."}
+{"illness": "acidity", "food": "ice cream", "ai_label": "Probably not suitable", "confidence": 0.78, "explaination": "Ice Cream might not be the best option if you have acidity, but confidence is moderate."}
+{"illness": "acidity", "food": "milk", "ai_label": "Strongly not recommended", "confidence": 0.82, "explaination": "Milk is likely harmful or may worsen acidity. Consider avoiding it."}
+{"illness": "fever", "food": "cold drinks", "ai_label": "Uncertain", "confidence": 0.54, "explaination": "AI could not confidently determine if cold drinks is unsafe for fever."}
+{"illness": "fever", "food": "cold drinks", "ai_label": "Strongly not recommended", "confidence": 0.95, "explaination": "Cold Drinks is commonly known to worsen fever. This advice is based on dietary health guidelines."}
+{"illness": "fever", "food": "cold drinks", "ai_label": "Strongly not recommended", "confidence": 0.95, "explaination": "Cold Drinks is commonly known to worsen fever. This advice is based on dietary health guidelines."}
+{"illness": "fever", "food": "cold drinks", "ai_label": "Strongly not recommended", "confidence": 0.95, "explaination": "Cold Drinks is commonly known to worsen fever. This advice is based on dietary health guidelines."}
+{"illness": "fever", "food": "porridge", "ai_label": "Suitable", "confidence": 0.95, "explaination": "Porridge is commonly suitable for fever. This advice is based on dietary health guidelines."}
+{"illness": "fever", "food": "porridge", "ai_label": "Suitable", "confidence": 0.95, "explaination": "Porridge is commonly suitable for fever. This advice is based on dietary health guidelines."}
+{"illness": "fever", "food": "porridge", "ai_label": "Suitable", "confidence": 0.95, "explaination": "Porridge is commonly suitable for fever. This advice is based on dietary health guidelines."}
+{"illness": "fever", "food": "porridge", "ai_label": "Suitable", "confidence": 0.95, "explaination": "Porridge is commonly suitable for fever. This advice is based on dietary health guidelines."}
+{"illness": "fever", "food": "porridge", "ai_label": "Suitable", "confidence": 0.95, "explaination": "Porridge is commonly suitable for fever. This advice is based on dietary health guidelines."}
+{"illness": "constipation", "food": "oats", "ai_label": "Suitable", "confidence": 0.95, "explaination": "Oats is commonly suitable for constipation. This advice is based on dietary health guidelines."}
+{"illness": "constipation", "food": "oats", "ai_label": "Suitable", "confidence": 0.95, "explaination": "Oats is commonly suitable for constipation. This advice is based on dietary health guidelines."}
+{"illness": "constipation", "food": "oats", "ai_label": "Suitable", "confidence": 0.95, "explaination": "Oats is commonly suitable for constipation. This advice is based on dietary health guidelines."}
+{"illness": "constipation", "food": "oats", "ai_label": "Suitable", "confidence": 0.95, "explaination": "Oats is commonly suitable for constipation. This advice is based on dietary health guidelines."}
+{"illness": "constipation", "food": "oats", "ai_label": "Suitable", "confidence": 0.95, "explaination": "Oats is commonly suitable for constipation. This advice is based on dietary health guidelines."}
+{"illness": "constipation", "food": "white bread", "ai_label": "Strongly not recommended", "confidence": 0.95, "explaination": "White Bread is commonly known to worsen constipation. This advice is based on dietary health guidelines."}
+{"illness": "constipation", "food": "white bread", "ai_label": "Strongly not recommended", "confidence": 0.95, "explaination": "White Bread is commonly known to worsen constipation. This advice is based on dietary health guidelines."}
+{"illness": "constipation", "food": "white bread", "ai_label": "Strongly not recommended", "confidence": 0.95, "explaination": "White Bread is commonly known to worsen constipation. This advice is based on dietary health guidelines."}
