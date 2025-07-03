@@ -4,6 +4,10 @@
 
 ---
 
+## Project Screenshot (Initial)
+
+![App Screenshot](frontend/public/Site-initial-preview.png)
+
 ## ✅ Features
 
 - 🔍 Food safety analysis based on symptoms or health conditions
