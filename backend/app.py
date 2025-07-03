@@ -2,8 +2,17 @@ from fastapi import FastAPI, Request
 from transformers import pipeline
 from pydantic import BaseModel
 import json
+from fastapi.middleware.cors import CORSMiddleware
+
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In dev mode, allow all
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Load HuggingFace classifier
 classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")

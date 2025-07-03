@@ -36,3 +36,12 @@
 {"illness": "constipation", "food": "white bread", "ai_label": "Strongly not recommended", "confidence": 0.95, "explaination": "White Bread is commonly known to worsen constipation. This advice is based on dietary health guidelines."}
 {"illness": "constipation", "food": "white bread", "ai_label": "Strongly not recommended", "confidence": 0.95, "explaination": "White Bread is commonly known to worsen constipation. This advice is based on dietary health guidelines."}
 {"illness": "constipation", "food": "white bread", "ai_label": "Strongly not recommended", "confidence": 0.95, "explaination": "White Bread is commonly known to worsen constipation. This advice is based on dietary health guidelines."}
+{"illness": "fever", "food": "curd", "ai_label": "Uncertain", "confidence": 0.45, "explaination": "AI could not confidently determine if curd is unsafe for fever."}
+{"illness": "fever", "food": "curd", "ai_label": "Uncertain", "confidence": 0.45, "explaination": "AI could not confidently determine if curd is unsafe for fever."}
+{"illness": "string", "food": "string", "ai_label": "Strongly not recommended", "confidence": 0.8, "explaination": "String is likely harmful or may worsen string. Consider avoiding it."}
+{"illness": "fever", "food": "curd", "ai_label": "Uncertain", "confidence": 0.45, "explaination": "AI could not confidently determine if curd is unsafe for fever."}
+{"illness": "fever", "food": "ice cream", "ai_label": "Strongly not recommended", "confidence": 0.95, "explaination": "Ice Cream is commonly known to worsen fever. This advice is based on dietary health guidelines."}
+{"illness": "fever", "food": "coca cola", "ai_label": "Uncertain", "confidence": 0.52, "explaination": "AI could not confidently determine if coca cola is unsafe for fever."}
+{"illness": "fever", "food": "brocoli", "ai_label": "Uncertain", "confidence": 0.53, "explaination": "AI could not confidently determine if brocoli is unsafe for fever."}
+{"illness": "fever", "food": "broccoli", "ai_label": "Uncertain", "confidence": 0.59, "explaination": "AI could not confidently determine if broccoli is unsafe for fever."}
+{"illness": "fever", "food": "warm water", "ai_label": "Uncertain", "confidence": 0.53, "explaination": "AI could not confidently determine if warm water is unsafe for fever."}
