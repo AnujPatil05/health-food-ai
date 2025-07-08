@@ -45,3 +45,35 @@
 {"illness": "fever", "food": "brocoli", "ai_label": "Uncertain", "confidence": 0.53, "explaination": "AI could not confidently determine if brocoli is unsafe for fever."}
 {"illness": "fever", "food": "broccoli", "ai_label": "Uncertain", "confidence": 0.59, "explaination": "AI could not confidently determine if broccoli is unsafe for fever."}
 {"illness": "fever", "food": "warm water", "ai_label": "Uncertain", "confidence": 0.53, "explaination": "AI could not confidently determine if warm water is unsafe for fever."}
+{"illness": "fever", "food": "ice cream", "ai_label": "Strongly not recommended", "confidence": 0.95, "explaination": "Ice Cream is commonly known to worsen fever. This advice is based on dietary health guidelines."}
+{"illness": "fever", "food": "ice cream", "ai_label": "Strongly not recommended", "confidence": 0.95, "explaination": "Ice Cream is commonly known to worsen fever. This advice is based on dietary health guidelines."}
+{"illness": "fever", "food": "fried food", "ai_label": "Strongly not recommended", "confidence": 0.95, "explaination": "Fried Food is commonly known to worsen fever. This advice is based on dietary health guidelines."}
+{"illness": "fever", "food": "curd", "ai_label": "Uncertain", "confidence": 0.45, "explaination": "AI could not confidently determine if curd is unsafe for fever."}
+{"illness": "sore throat", "food": "curd", "ai_label": "Uncertain", "confidence": 0.56, "explaination": "AI could not confidently determine if curd is unsafe for sore throat."}
+{"illness": "sore throat", "food": "ice cream", "ai_label": "Strongly not recommended", "confidence": 0.95, "explaination": "Ice Cream is commonly known to worsen sore throat. This advice is based on dietary health guidelines."}
+{"illness": "sore throat", "food": "ice cream", "ai_label": "Strongly not recommended", "confidence": 0.95, "explaination": "Ice Cream is commonly known to worsen sore throat. This advice is based on dietary health guidelines."}
+{"illness": "sore throat", "food": "ice cream", "ai_label": "Strongly not recommended", "confidence": 0.95, "explaination": "Ice Cream is commonly known to worsen sore throat. This advice is based on dietary health guidelines."}
+{"illness": "sore throat", "food": "ice cream", "ai_label": "Strongly not recommended", "confidence": 0.95, "explaination": "Ice Cream is commonly known to worsen sore throat. This advice is based on dietary health guidelines."}
+{"illness": "sore throat", "food": "warm water", "ai_label": "Suitable", "confidence": 0.95, "explaination": "Warm Water is commonly suitable for sore throat. This advice is based on dietary health guidelines."}
+{"illness": "sore throat", "food": "warm water", "ai_label": "Suitable", "confidence": 0.95, "explaination": "Warm Water is commonly suitable for sore throat. This advice is based on dietary health guidelines."}
+{"illness": "sore throat", "food": "chocolate", "ai_label": "Probably not suitable", "confidence": 0.61, "explaination": "Chocolate might not be the best option if you have sore throat, but confidence is moderate."}
+{"illness": "sore throat", "food": "chocolate", "ai_label": "Probably not suitable", "confidence": 0.61, "explaination": "Chocolate might not be the best option if you have sore throat, but confidence is moderate."}
+{"illness": "sore throat", "food": "chocolate", "ai_label": "Probably not suitable", "confidence": 0.61, "explaination": "Chocolate might not be the best option if you have sore throat, but confidence is moderate."}
+{"illness": "sore throat", "food": "chocolate", "ai_label": "Probably not suitable", "confidence": 0.61, "explaination": "Chocolate might not be the best option if you have sore throat, but confidence is moderate."}
+{"illness": "sore throat", "food": "chocolate", "ai_label": "Probably not suitable", "confidence": 0.61, "explaination": "Chocolate might not be the best option if you have sore throat, but confidence is moderate."}
+{"illness": "sore throat", "food": "chocolate", "ai_label": "Probably not suitable", "confidence": 0.61, "explaination": "Chocolate might not be the best option if you have sore throat, but confidence is moderate."}
+{"illness": "sore throat", "food": "chocolate", "ai_label": "Probably not suitable", "confidence": 0.61, "explaination": "Chocolate might not be the best option if you have sore throat, but confidence is moderate."}
+{"illness": "sore throat", "food": "chocolate", "ai_label": "Probably not suitable", "confidence": 0.61, "explaination": "Chocolate might not be the best option if you have sore throat, but confidence is moderate."}
+{"illness": "sore throat", "food": "chocolate", "ai_label": "Probably not suitable", "confidence": 0.61, "explaination": "Chocolate might not be the best option if you have sore throat, but confidence is moderate."}
+{"illness": "sore throat", "food": "chocolate", "ai_label": "Probably not suitable", "confidence": 0.61, "explaination": "Chocolate might not be the best option if you have sore throat, but confidence is moderate."}
+{"illness": "fever ", "food": "curd", "ai_label": "Uncertain", "confidence": 0.47, "explaination": "AI could not confidently determine if curd is unsafe for fever ."}
+{"illness": "fever ", "food": "curd", "ai_label": "Uncertain", "confidence": 0.47, "explaination": "AI could not confidently determine if curd is unsafe for fever ."}
+{"illness": "fever ", "food": "curd", "ai_label": "Uncertain", "confidence": 0.47, "explaination": "AI could not confidently determine if curd is unsafe for fever ."}
+{"illness": "fever ", "food": "curd", "ai_label": "Uncertain", "confidence": 0.47, "explaination": "AI could not confidently determine if curd is unsafe for fever ."}
+{"illness": "fever ", "food": "curd", "ai_label": "Uncertain", "confidence": 0.47, "explaination": "AI could not confidently determine if curd is unsafe for fever ."}
+{"illness": "fever ", "food": "curd", "ai_label": "Uncertain", "confidence": 0.47, "explaination": "AI could not confidently determine if curd is unsafe for fever ."}
+{"illness": "fever ", "food": "curd", "ai_label": "Uncertain", "confidence": 0.47, "explaination": "AI could not confidently determine if curd is unsafe for fever ."}
+{"illness": "fever ", "food": "curd", "ai_label": "Uncertain", "confidence": 0.47, "explaination": "AI could not confidently determine if curd is unsafe for fever ."}
+{"illness": "fever ", "food": "curd", "ai_label": "Uncertain", "confidence": 0.47, "explaination": "AI could not confidently determine if curd is unsafe for fever ."}
+{"illness": "fever ", "food": "burger", "ai_label": "Uncertain", "confidence": 0.54, "explaination": "AI could not confidently determine if burger is unsafe for fever ."}
+{"illness": "fever ", "food": "oily foods", "ai_label": "Probably not suitable", "confidence": 0.71, "explaination": "Oily Foods might not be the best option if you have fever , but confidence is moderate."}

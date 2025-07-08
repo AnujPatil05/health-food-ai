@@ -34,59 +34,78 @@ function App() {
     }
   };
 
+  // Helper to format confidence and labels
+  const formatConfidence = (value) => `${Math.round(value * 100)}%`;
+  const isSafe = result?.ai_judgment.toLowerCase().includes("yes");
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-400 to-blue-600
- flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-100 via-teal-200 to-cyan-100
+      flex items-center justify-center px-4 py-12">
+      <div className="backdrop-blur-md backdrop-saturate-150 bg-white/30 border border-white/30 
+                shadow-lg rounded-xl p-6 w-full max-w-md min-w-[350px]">
 
-
-      <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-2xl w-full max-w-md border border-white/30">
-        <h1 className="text-2xl font-bold mb-4 text-center">🩺 Food Suitability Checker</h1>
+        <h1 className="text-3xl font-bold mb-6 text-center text-green-800">🩺 Food Suitability Checker AI</h1>
 
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
-            <label className="block mb-1 font-medium">Illness</label>
+            <label className="block mb-1 font-semibold text-gray-700">Illness</label>
             <input
               type="text"
               value={illness}
               onChange={(e) => setIllness(e.target.value)}
-              placeholder="e.g. fever"
-              className="w-full px-4 py-2 border rounded-xl"
+              placeholder="e.g. sore throat"
+              className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-400"
               required
             />
           </div>
 
           <div>
-            <label className="block mb-1 font-medium">Food Item</label>
+            <label className="block mb-1 font-semibold text-gray-700">Food Item</label>
             <input
               type="text"
               value={food}
               onChange={(e) => setFood(e.target.value)}
               placeholder="e.g. curd"
-              className="w-full px-4 py-2 border rounded-xl"
+              className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-400"
               required
             />
           </div>
 
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition"
+            className="w-full bg-green-600 text-white font-semibold py-2 rounded-xl hover:bg-green-700 transition"
           >
-            {loading ? "Checking..." : "Check"}
+            {loading ? "Checking..." : "Check Suitability"}
           </button>
         </form>
 
-        {/* 🔍 Show results */}
+        {/* Result Section */}
         {result && (
-          <div className="mt-6 p-4 border rounded-xl bg-gray-50">
-            <p><strong>Decision:</strong> {result.ai_judgment}</p>
-            <p><strong>Confidence:</strong> {result.ai_confidence}</p>
-            <p className="mt-2 text-sm text-gray-700">{result.explaination}</p>
+          <div className="mt-6 p-4 border border-gray-200 rounded-xl bg-gray-50 animate-fade-in">
+            <div className="flex items-center justify-between mb-2">
+              <span className="font-bold text-gray-800">Decision:</span>
+              <span
+                className={`px-3 py-1 text-sm font-semibold rounded-full ${
+                  isSafe
+                    ? "bg-green-100 text-green-700 border border-green-400"
+                    : "bg-red-100 text-red-700 border border-red-400"
+                }`}
+              >
+                {isSafe ? "✅ Safe to Eat" : "❌ Not Safe"}
+              </span>
+            </div>
+
+            <div className="text-sm text-gray-600 mb-1">
+              <strong>Confidence:</strong> {formatConfidence(result.ai_confidence)}
+            </div>
+
+            <p className="mt-2 text-gray-700 text-sm">{result.explaination}</p>
           </div>
         )}
 
-        {/* ⚠️ Error Handling */}
+        {/* Error Message */}
         {error && (
-          <div className="mt-4 text-red-600 text-sm text-center">
+          <div className="mt-4 bg-red-100 text-red-800 text-sm px-4 py-2 rounded-xl text-center border border-red-300">
             {error}
           </div>
         )}
